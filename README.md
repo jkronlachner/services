@@ -6,10 +6,11 @@
 * For the main product, refer to **services.**
 * **Media** is the folder for our markdown media files
 
-## Mockup for services. Programm
+## Mockup
 
 ![Mockup](/media/mockup.gif)
 
+This is how the main product will look and work. 
 
 
 # How to build Webapps with React
@@ -23,3 +24,11 @@ For first impressions, and easy access to React, please refer to the "hello-worl
 For best documentation use the offical React documentation.
 
 [React Documentation](https://reactjs.org/docs/getting-started.html)
+
+# About us
+
+If you want to learn more about us, you can get more information on our website
+[lab73](https://lab73.at)
+
+If you have any questions, feel free to E-Mail us at
+[office@lab73.at](office@lab73.at)
