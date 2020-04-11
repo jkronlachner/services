@@ -13,7 +13,9 @@
 This is how the main product will look and work. 
 
 
-# How to build Webapps with React
+# Get started with React
+
+>In order to get started with something, you have to get started
 
 In this repo you will find everything you need to build your first functional React Frontend Application paired with a Microservice Backend done in Spring Boot. 
 
