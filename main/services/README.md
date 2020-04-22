@@ -2,7 +2,7 @@
 
 In diesem Teil des Repos findet ihr die Source Files für die richtige React-App
 
-##How to set up.
+## How to set up.
 
 - Download Repository
 - type 'cd main/services' & 'npm install'
