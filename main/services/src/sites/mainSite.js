@@ -1,7 +1,8 @@
 import React from "react";
 import {MapComponent} from "../components/mapComponent";
+import {SearchComponent} from "../components/searchComponent";
+import {ListComponent} from "../components/listComponent";
 import {makeStyles} from "@material-ui/core";
-import Typography from "@material-ui/core/Typography";
 
 const useStyles = makeStyles(theme => ({
     root: {
@@ -17,8 +18,19 @@ const useStyles = makeStyles(theme => ({
         backgroundColor: theme.palette.primary.main,
         borderRadius: "0 50px 50px 0",
         overflow: "hidden",
+    },
+    services: {
+        width: "50vw",
+        height: "100vh",
+        display: "flex",
+        flexDirection: "column",
+    },
+    search: {
+        height: "20vh",
+    },
+    list:{
+        height: "80vh",
     }
-
 }));
 
 export default function MainSite() {
@@ -28,7 +40,12 @@ export default function MainSite() {
             <MapComponent/>
         </div>
         <div className={classes.services}>
-            <Typography variant={"h1"}>services.</Typography>
+            <div className={classes.search}>
+                <SearchComponent/>
+            </div>
+            <div className={classes.list}>
+                <ListComponent/>
+            </div>
         </div>
     </div>
 }
