@@ -1,6 +1,6 @@
 # services. 
 
-Live [Demo](https://services-a5iuuzgvj.now.sh/)
+Live [Demo](https://services.jkronlachner.now.sh/)
 
 ## Structure 
 
