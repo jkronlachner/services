@@ -1,4 +1,4 @@
-package com.lab73.Services;
+package com.lab73;
 
 import com.lab73.Data.Employee;
 import com.lab73.Data.EmployeeDto;
@@ -8,16 +8,11 @@ import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
 
-@Component
 public class EmployeeService {
 
     private HashMap<Integer, Employee> memory = new HashMap();
 
-    public EmployeeService() {
-        populateData();
-    }
-
-    private void populateData() {
+    public void populateData() {
         EmployeeDto employeeDto1 = new EmployeeDto();
         employeeDto1.setFirstname("Hubert");
         employeeDto1.setLastname("Sauerampfer");

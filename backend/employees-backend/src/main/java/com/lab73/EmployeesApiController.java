@@ -1,8 +1,7 @@
-package com.lab73.Controllers;
+package com.lab73;
 
 import com.lab73.Data.Employee;
 import com.lab73.Data.EmployeeDto;
-import com.lab73.Services.EmployeeService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpEntity;
 import org.springframework.web.bind.annotation.*;
@@ -13,7 +12,6 @@ import java.util.List;
 @RestController
 @RequestMapping("api/employees")
 public class EmployeesApiController {
-
     @Autowired
     private EmployeeService employeeService;
 

@@ -6,10 +6,10 @@ import java.util.*;
 
 @Data
 public class Service {
-    public int id;
-    public String name;
-    public Date date;
-    public String lat;
-    public String lon;
-    public int employeeId;
+    private int id;
+    private String name;
+    private Date date;
+    private String lat;
+    private String lon;
+    private int employeeId;
 }
