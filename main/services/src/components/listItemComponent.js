@@ -12,6 +12,7 @@ const useStyles = makeStyles(theme => ({
         width: "100wh",
         display: "flex",
         alignItems: "center",
+        marginBottom: "1rem"
     },
     column: {
         display: "flex",
