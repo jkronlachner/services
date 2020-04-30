@@ -73,6 +73,9 @@ public class ServiceDataService {
 
         Service service = new Service();
         service.setName(serviceDto.getName());
+        service.setEmoji(serviceDto.getEmoji());
+        service.setHourRate(serviceDto.getHourRate());
+
         try {
             service.setDate(simpleDateFormat.parse(serviceDto.getDate()));
         } catch (ParseException e) {

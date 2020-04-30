@@ -8,4 +8,6 @@ public class ServiceDto {
     private String address;
     private String date;
     private int employeeId;
+    private double hourRate;
+    private String emoji;
 }

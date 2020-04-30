@@ -12,4 +12,6 @@ public class Service {
     private String lat;
     private String lon;
     private int employeeId;
+    private double hourRate;
+    private String emoji;
 }
