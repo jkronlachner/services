@@ -1,8 +1,9 @@
 import React from "react";
-import {MapComponent} from "../components/mapComponent";
 import {SearchComponent} from "../components/searchComponent";
 import {ListComponent} from "../components/listComponent";
 import {makeStyles} from "@material-ui/core";
+import CreateEditDialog from "../overlays/CreateService";
+import {MapComponent} from "../components/mapComponent";
 
 const useStyles = makeStyles(theme => ({
     root: {
@@ -36,6 +37,7 @@ const useStyles = makeStyles(theme => ({
 export default function MainSite() {
     const classes = useStyles();
     return <div className={classes.root}>
+        <CreateEditDialog open={true}/>
         <div className={classes.map}>
             <MapComponent/>
         </div>
