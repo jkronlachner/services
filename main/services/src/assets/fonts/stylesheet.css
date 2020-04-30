@@ -1,0 +1,36 @@
+@font-face {
+    font-family: 'MADE Tommy Soft';
+    src: url('MADETommySoft.woff2') format('woff2'),
+        url('MADETommySoft.woff') format('woff'),
+        url('MADETommySoft.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'MADE Tommy Soft';
+    src: url('MADETommySoft-ExtraBold.woff2') format('woff2'),
+        url('MADETommySoft-ExtraBold.woff') format('woff'),
+        url('MADETommySoft-ExtraBold.ttf') format('truetype');
+    font-weight: 800;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'MADE Tommy Soft';
+    src: url('MADETommySoft-Bold.woff2') format('woff2'),
+        url('MADETommySoft-Bold.woff') format('woff'),
+        url('MADETommySoft-Bold.ttf') format('truetype');
+    font-weight: bold;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'MADE Tommy Soft';
+    src: url('MADETommySoft-Light.woff2') format('woff2'),
+        url('MADETommySoft-Light.woff') format('woff'),
+        url('MADETommySoft-Light.ttf') format('truetype');
+    font-weight: 300;
+    font-style: normal;
+}
+

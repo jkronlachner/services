@@ -7,6 +7,7 @@ Live [Demo](https://services.jkronlachner.now.sh/)
 * For beginners guide, refer to **hello-world** 
 * For the main product, refer to **services.**
 * **Media** is the folder for our markdown media files
+* backend is the folder for our Backend (obviously)
 
 ## Mockup
 
@@ -25,9 +26,11 @@ For first impressions, and easy access to React, please refer to the "hello-worl
 
 # Documentation
 
-For best documentation use the offical React documentation.
+For best documentation on React use the offical React documentation.
 
 [React Documentation](https://reactjs.org/docs/getting-started.html)
+
+or just search StackOverflow
 
 # About us
 
