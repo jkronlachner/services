@@ -2,6 +2,8 @@
 
 Live [Demo](https://services.jkronlachner.now.sh/)
 
+[Documentation](React - Documentation lab73.pdf)
+
 ## Structure 
 
 * For beginners guide, refer to **hello-world** 
