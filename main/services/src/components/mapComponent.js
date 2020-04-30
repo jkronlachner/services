@@ -4,7 +4,6 @@ import {useTheme} from "@material-ui/core";
 import marker from "../assets/Icon awesome-map-marker.png"
 
 export function MapComponent() {
-    const theme = useTheme();
     const Map = ReactMapboxGl({
         accessToken: "pk.eyJ1Ijoiamtyb25sYWNobmVyIiwiYSI6ImNrNnYwZHh5aTBlanYzZXA3MXNkbzNtcHkifQ.zllgA50ypjzf2bLxIkRbDQ"
     });
@@ -18,7 +17,7 @@ export function MapComponent() {
             }}
         >
            <Marker coordinates={[-0.24, 51.52]}>
-                <img src={marker} />
+                <img src={marker}/>
             </Marker>
 
         </Map>

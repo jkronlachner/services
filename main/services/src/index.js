@@ -1,5 +1,6 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
+import "./assets/fonts/stylesheet.css"
 import './index.css';
 import * as serviceWorker from './serviceWorker';
 import {MapComponent} from "./components/mapComponent";
@@ -20,9 +21,8 @@ let theme = createMuiTheme({
 
     },
     typography: {
-        fontFamily: ["MADE Thommy Soft"],
+        fontFamily: "MADE Tommy Soft",
         p: {
-            fontFamily: "MADE Thommy Soft",
             fontWeight: "normal",
             fontSize: 15,
             lineHeight: 1.6,
@@ -55,8 +55,6 @@ let theme = createMuiTheme({
     }
 });
 theme = responsiveFontSizes(theme);
-
-
 
 
 
