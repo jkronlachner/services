@@ -28,8 +28,8 @@ public class ServicesApiController {
     }
 
     @RequestMapping(path = "{id}", method = RequestMethod.PUT)
-    public Service editService(@PathVariable int id, @RequestBody ServiceDto serviceDto) {
-        return serviceDataService.editService(id, serviceDto);
+    public Service editService(@PathVariable int id, @RequestBody Service service) {
+        return serviceDataService.editService(id, service);
     }
 
     @RequestMapping(method = RequestMethod.POST)

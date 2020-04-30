@@ -57,8 +57,7 @@ public class ServiceDataService {
         return memory.remove(id);
     }
 
-    public Service editService(int id, ServiceDto serviceDto) {
-        Service service = convertServiceDto(serviceDto);
+    public Service editService(int id, Service service) {
         service.setId(id);
         memory.put(id, service);
         return service;
