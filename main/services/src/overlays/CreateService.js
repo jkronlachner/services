@@ -1,4 +1,4 @@
-import React from "react";
+import React, {useState} from "react";
 import {makeStyles} from "@material-ui/styles";
 import Dialog from "@material-ui/core/Dialog";
 import DialogTitle from "@material-ui/core/DialogTitle";
@@ -12,6 +12,7 @@ import {AccountCircle} from "@material-ui/icons";
 import MenuItem from "@material-ui/core/MenuItem";
 import DialogActions from "@material-ui/core/DialogActions";
 import Button from "@material-ui/core/Button";
+import {serverService} from "../helpers/serverService";
 
 const useStyles = makeStyles(theme => ({
     root: {
@@ -65,14 +66,44 @@ const emojis = [
 ];
 
 const employees = [{
-    value : "Max Muster"
+    value : "Max Muster",
+    id: 0
 }];
 
-export default function CreateEditDialog({open, service}){
+export default function CreateEditDialog({open, service, updateFunction}){
     const classes = useStyles();
     const theme = useTheme();
-    return <Dialog open={open} classes={{paper: classes.root}} fullWidth>
-        <DialogTitle id="simple-dialog-title">{service ? <Typography variant={"h1"}>Edit Rasenmähen</Typography>:  <Typography variant={"h1"}>Neuen Service erstellen<span style={{color: theme.palette.primary.main}}>.</span></Typography>}</DialogTitle>
+
+    const [openState, setOpenState] = open;
+    const [serviceState, setServiceState] = useState(service ? service : {address: "Muckenhuberweg 17 4631 Krenglbach"});
+
+    function handleChange(e, name) {
+        const value = e.target.value;
+        const serv = {...serviceState};
+        if(name === "name") serv.name = value;
+        else if(name === "date") serv.date = value;
+        else if(name === "employee") serv.employeeId = employees.find(value1 => value1.value === value).id;
+        //else if(name === "hourRate") serv.hourRate = value;
+        setServiceState(serv);
+
+        console.log(serv);
+    }
+
+    function handleSave() {
+        if(serviceState.id){
+            serverService.changeService(serviceState.id, serviceState).then(updateFunction());
+        }
+        serverService.addService(serviceState).then(updateFunction());
+        handleClose();
+    }
+
+    function handleClose() {
+        setOpenState(false);
+
+    }
+
+    return <Dialog open={openState} classes={{paper: classes.root}} fullWidth>
+        <DialogTitle id="simple-dialog-title">{service ? <Typography variant={"h1"}>Edit {service.name}</Typography>:  <Typography variant={"h1"}>Neuen Service erstellen<span style={{color: theme.palette.primary.main}}>.</span></Typography>}</DialogTitle>
         <DialogContent>
             <TextField select label={"Icon"} className={classes.textField}  fullWidth>
                 {emojis.map((option) => (
@@ -81,8 +112,13 @@ export default function CreateEditDialog({open, service}){
                     </MenuItem>
                 ))}
             </TextField>
-            <TextField label={"Name"} className={classes.textField} fullWidth/>
-            <TextField select label={"Employee"} className={classes.textField} fullWidth>
+            <TextField label={"Name"}
+                       onChange={e => handleChange(e, "name")}
+                       value={serviceState.name}
+                       className={classes.textField} fullWidth/>
+            <TextField select label={"Employee"}
+                       onChange={e => handleChange(e, "employee")}
+                       className={classes.textField} fullWidth>
                 {employees.map((option) => (
                     <MenuItem key={option.value} value={option.value}>
                         {option.value}
@@ -95,19 +131,25 @@ export default function CreateEditDialog({open, service}){
                         <CalendarTodayRounded color={"primary"}/>
                     </InputAdornment>
                 ),
-            }} type={"date"} className={classes.textField} fullWidth/>
+            }}
+                       onChange={e => handleChange(e, "date")}
+                       value={serviceState.date}
+                       className={classes.textField} fullWidth/>
             <TextField InputProps={{
                 endAdornment: (
                     <InputAdornment position="end">
                        <Typography variant={"h2" } style={{color: theme.palette.primary.main}}>€</Typography>
                     </InputAdornment>
                 ),
-            }} label={"Hourrate"} fullWidth/>
+            }} label={"Hourrate"}
+                       onChange={e => handleChange(e, "hourRate")}
+                       value={serviceState.hourRate}
+                       fullWidth/>
 
         </DialogContent>
         <DialogActions>
-            <Button  className={classes.button2}>Abbrechen</Button>
-            <Button className={classes.button1}>Speichern</Button>
+            <Button  className={classes.button2} onClick={event => handleClose()}>Abbrechen</Button>
+            <Button className={classes.button1} onClick={event => handleSave()}>Speichern</Button>
         </DialogActions>
     </Dialog>
 }

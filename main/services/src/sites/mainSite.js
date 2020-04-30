@@ -1,4 +1,4 @@
-import React from "react";
+import React, {useState} from "react";
 import {SearchComponent} from "../components/searchComponent";
 import {ListComponent} from "../components/listComponent";
 import {makeStyles} from "@material-ui/core";
@@ -36,17 +36,18 @@ const useStyles = makeStyles(theme => ({
 
 export default function MainSite() {
     const classes = useStyles();
+    const [search, setSearch] = useState('');
+
     return <div className={classes.root}>
-        <CreateEditDialog open={true}/>
-        <div className={classes.map}>
-            <MapComponent/>
+        <div className={classes.map} key={"123"}>
+            <MapComponent key={"1234"}/>
         </div>
         <div className={classes.services}>
             <div className={classes.search}>
-                <SearchComponent/>
+                <SearchComponent search={[search, setSearch]}/>
             </div>
             <div className={classes.list}>
-                <ListComponent/>
+                <ListComponent search={[search, setSearch]}/>
             </div>
         </div>
     </div>
