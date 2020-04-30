@@ -2,7 +2,7 @@
 
 Live [Demo](https://services.jkronlachner.now.sh/)
 
-[Documentation](React - Documentation lab73.pdf)
+[Documentation](https://github.com/jkronlachner/services/blob/master/React%20-%20Documentation%20lab73.pdf)
 
 ## Structure 
 
