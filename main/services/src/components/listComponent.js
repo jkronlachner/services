@@ -58,8 +58,6 @@ export function ListComponent({search}) {
     }]);
 
     useEffect(() => {
-
-        console.log("NEWW UPDATE");
         serverService.getAllServices().then(value => {
 
             console.log('SEARCH STATE', searchState);
