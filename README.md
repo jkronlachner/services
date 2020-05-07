@@ -28,7 +28,8 @@ For first impressions, and easy access to React, please refer to the "hello-worl
 
 # Documentation
 
-For best documentation on React use the offical React documentation.
+You will find the Documentation about this project in the Root folder. 
+For best offical documentation on React use the offical React documentation.
 
 [React Documentation](https://reactjs.org/docs/getting-started.html)
 
